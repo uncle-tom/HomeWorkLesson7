@@ -38,6 +38,7 @@
 		  margin-left: auto;
 		}
 		.wrapper {
+			width: 100%;
 			background-color: #ffffff;
 			float: left;
 			padding: 80px;
@@ -56,7 +57,11 @@
 		.menu {
 			display: flex;
 			justify-content: space-evenly;
+			padding: 20px;
 			margin-bottom: 50px;
+		}
+		.inner {
+			padding: 20px;
 		}
 		.menu li {
 			list-style-type: none;
@@ -100,13 +105,7 @@
 		}
 		.item.h2 {
 		  height: 130px;
-		}*/
-		/*.tabcontent {
-			display: none;
 		}
-		.tabcontent:first-of-type {
-			display: block;
-		}*/
 	</style>
 	<div class="container">
 		<h1>Creative portfolio</h1>
@@ -172,32 +171,12 @@
 	<script>
 		$('.tabcontent').hide();
 		$('.tabcontent:first').show();
-		var data_content = $('.tabcontent').data("content");
-		// console.log(data_content);
-		// var click_number = $('.menu li');
-		// for (i=0; i < click_number.length; i++){
-		// 	console.log(i);
-		// }
 		$('.menu li').click(function(data){
 			var display = $(this).data("display");
 			$('.tabcontent').hide();
     	$('.'+ display + '-items').fadeIn('slow');
 		});
 		
-		// if()
-		// var prev = 0;
-		// $('.menu li').click(function(){
-		// 	var now = $(this).data("number");
-		// 	if (now > prev) {
-		// 		console.log('right');
-		// 		prev = now;
-		// 	}
-		// 	else {
-		// 		console.log('left');
-		// 		prev = now;
-		// 	}
-			
-		// });
 		var container = document.querySelector('.masonry-items');
 		var msnry = new Masonry( container, {
 		  // Настройки
